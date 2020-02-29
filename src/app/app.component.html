@@ -1,60 +1,31 @@
-<ng-template [ngIf]="onLanding">
-  <div class="landing-image"
-    [ngStyle]="setLandingImage()"></div>
-  <div class="landing-container">
-
-      <h2 class="top-h2" >Jason Buoni</h2>
-      <span>Software Developer.<br/>Pet Enthusiast.<br/>Mentor.<br/></span>
-      <div class="col-md-3 col-sm-3 col-xs-6 landing-link-container">
-            <a class="btn btn-sm animated-button victoria-one" href="#" (click)="updateLanding(false)">View More</a>
-      </div>
-  </div>
+<ng-template [ngIf]="!landingSingleton.isLanding">
+  <div class="nav-bar">
+    <div class="nav nav-brand" >
+      <a href="#" (click)="setLanding(true)" class="nav nav-link" routerLink="/landing">Jason Buoni</a>
+    </div>
+    <div class="nav-right">
+        <a href="#" (click)="setLanding(false)" class="nav nav-link" routerLink="/about">About</a>
+        <a href="#" (click)="setLanding(false)" class="nav nav-link" routerLink="/proj">Projects</a>
+        <a href="#" (click)="setLanding(false)" class="nav nav-link" routerLink="/mentees">Algorithms</a>
+        <a href="#" (click)="setLanding(false)" class="nav nav-link" routerLink="/mentees">Mentorship</a>
+        <a href="https://www.hackerrank.com/JBuoni?hr_r=1" (click)="setLanding(false)"
+           target="_blank" class="nav nav-link">
+           Hacker Rank
+        </a>
+        <a href="#" (click)="setLanding(false)" class="nav nav-link" routerLink="/resume">Resume</a>
+    </div>
+</div>
 </ng-template>
 
-<ng-template [ngIf]="!onLanding">
-  <div class="about-content">
-    <div class="header-top">
-      <h1 class="header-h3">About</h1>
-      <div class="header-bar linewidth-about"></div>
-  </div>
-    <div class="about-middle">
-      <ng-template ngFor let-icon [ngForOf]="aboutIcons" let-i="index">
-        <div class="icon-container">
-          <div class="circle">
-              <i ngClass="{{icon.faIcon}} fa-4x mid-icon"></i>
-          </div>
-          <div class="middle-text">{{icon.title}}</div>
-          <div class="middle-exp">{{icon.exp}}</div>
-        </div>
-      </ng-template>
-  </div>
-    <div class="about-bottom">
-            <div class="col sm-col-9 about-left">
-              <div class="octo">
-                <div class="octo1">
-                    <img class="photo" src="assets/images/me_new.jpg"/>
-                </div>
-              </div>
-              <div class="about-text">
-                <h3 class="about-h1">Who's This Guy?</h3>
-                I am a full stack developer who loves just about every language not named C.
-                After spending years in the Rochester tundra, I was able to earn my undergrad from RIT.
-                Once I moved to the tropics in Atlanta, I worked to obtain my Masters from Georgia Tech.
-                I am also a pet enthusiast, and will always have multiple pets in my house at any given time.
-                My parents raise Nubian Goats and Great Pyrenees puppies. One day I'll redo their website, but for now you can see it
-                <span  class="item-hover" onClick={clickFarm}><i> here.</i></span>
-                The baby's name is David and he is not mine, but is like a nephew to me.
-                He currently loves keys, dinosaurs, and his fish tank.
-            </div>
-            </div>
-        <div class="col about-right">
-            <!-- <Fade right>
-                < Experience />
-            </Fade>
-            <Fade bottom>
-                < Social />
-            </Fade> -->
-        </div>
-    </div>
-  </div>
+<router-outlet></router-outlet>
+
+<ng-template [ngIf]="!landingSingleton.isLanding">
+  <div class="footer">
+    <a href="#" (click)="onEmailButtonClick()"><i class="far fa-envelope-open fa-2x icon"></i></a>
+    <a href="https://www.linkedin.com/in/jason-buoni-33684451/" target="_blank"><i class="fab fa-linkedin-in fa-2x icon"></i></a>
+    <a href="https://github.com/jbuoni" target="_blank"><i class="fab fa-github-alt fa-2x icon" aria-hidden="true"></i></a>
+    <a href="https://bitbucket.org/JasonBuoni25/" target="_blank"><i class="fab fa-bitbucket fa-2x icon" aria-hidden="true"></i></a>
+    <a href="https://stackoverflow.com/users/650489/stanley-cup-phil" target="_blank"><i class="fab fa-stack-overflow fa-2x icon"></i></a>
+    <a href="https://www.facebook.com/jason.buoni" target="_blank"><i class="fab fa-facebook fa-2x icon"></i></a>
+</div>
 </ng-template>

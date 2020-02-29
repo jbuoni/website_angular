@@ -1,0 +1,52 @@
+@import "shared.less";
+@hover: @third;
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  background-color: @primary;
+  border-bottom: 3px solid @third;
+
+  a {
+    color: @white !important;
+    text-decoration: none !important;
+
+    &:hover {
+      color: @hover !important;
+    }
+  }
+
+}
+
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  float: right;
+  padding-right: 15px;
+
+  .nav-selected {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .nav-link {
+    padding-top: 10px;
+    color: @white;
+
+    &:hover {
+      cursor: pointer;
+      color: @hover !important;
+    }
+  }
+}
+
+.nav-brand {
+  padding: 10px 60px 10px 60px;
+  font-weight: 700;
+  font-size: 1.2em;
+
+  &:hover {
+    cursor: pointer;
+    color: @hover !important;
+  }
+}
