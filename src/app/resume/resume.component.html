@@ -1,0 +1,85 @@
+<div class="resume-overlay"></div>
+<div class="resume">
+    <div class="resume-top">
+        <div class="resume-top-left">
+            <div class="resume-name">Jason Buoni</div>
+            <div class="resume-title">Software Engineer</div>
+        </div>
+        <button class="resume-download-button" (click)="viewPdf()">View PDF</button>
+    </div>
+    <div class="resume-content">
+        <div class="resume-content-right">
+            <div class="about">
+                <h3 class="resume-header">Who am I?</h3>
+                <div class="about-text">
+                    I am a polyglot developer with a Masters in Computer Science.
+                    I focus on full-stack development and enjoy learning about cyber security principles and machine learning.
+                    I also have experience with big data as well as DevOps.
+                </div>
+            </div>
+            <div class="personal">
+                <h3 class="resume-header">Personal</h3>
+                <ng-template ngFor let-icon [ngForOf]="icons" let-i="index">
+                  <div class="resume-content-item">
+                    <i ngClass="{{icon.faClass}} fa-1x resume-icon"></i>{{icon.text}}
+                  </div>
+                </ng-template>
+            </div>
+            <div class="skills">
+                <h3 class="resume-header">Languages and Tools</h3>
+                <ng-template ngFor let-skill [ngForOf]="skills" let-i="index">
+                  <div class="skill-container">
+                    <div class="skill-span">{{skill.skill}}:</div>
+                      <i *ngFor="let subItem of skill['stars']" class="fas fa-star star"></i>
+                  </div>
+                </ng-template>
+            </div>
+            <div class="skills">
+                <h3 class="resume-header">Soft Skills</h3>
+                <ng-template ngFor let-skill [ngForOf]="softSkills" let-i="index">
+                  <div class="skill-container">
+                    <div class="skill-span">{{skill.skill}}:</div>
+                    <i *ngFor="let subItem of skill.stars" class="fas fa-star star"></i>
+                  </div>
+                </ng-template>
+            </div>
+            <div class="certifications" >
+                <h3 class="resume-header">Certifications</h3>
+                <div class="cert-div"><b>Scrum Certification, 2016</b> Scrum Alliance</div>
+            </div>
+        </div>
+        <div class="resume-mid">
+            <div class="resume-section">
+              <h3 class="resume-header">Experience</h3>
+              <div class="resume-line"></div>
+              <ng-template ngFor let-job [ngForOf]="jobs" let-i="index">
+                <div class="resume-item-container">
+                  <img class="resume-image" src="{{job.image}}" />
+                  <div class="resume-item">
+                      <h6 class="resume-date">{{job.date}}</h6>
+                      <h5 class="resume-line1">{{job.line1}}</h5>
+                      <h6 class="resume-line2"><i>{{job.line2}}</i></h6>
+                      <div *ngIf="job.info">
+                        <li *ngFor="let jobInfo of job.info">{{jobInfo}}</li>
+                      </div>
+                  </div>
+                </div>
+              </ng-template>
+            </div>
+            <div class="resume-section">
+              <h3 class="resume-header">Education</h3>
+              <div class="resume-line"></div>
+              <ng-template ngFor let-job [ngForOf]="education" let-i="index">
+                <div class="resume-item-container">
+                  <img class="resume-image" src="{{job.image}}" />
+                  <div class="resume-item">
+                      <h6 class="resume-date">{{job.date}}</h6>
+                      <h5 class="resume-line1">{{job.line1}}</h5>
+                      <h6 class="resume-line2"><i>{{job.line2}}</i></h6>
+                  </div>
+                </div>
+              </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

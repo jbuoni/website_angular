@@ -9,7 +9,8 @@ import LandingSingleton from './common/landingSingleton';
 
 export class AppComponent {
   landingSingleton: LandingSingleton;
-  landing:boolean;
+  landing: boolean;
+  currentTab: string;
 
   constructor() {
     this.landingSingleton = LandingSingleton.getInstance();
@@ -24,6 +25,8 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
+    const url: string = window.location.href;
+    this.currentTab = url.split('/').pop();
     this.landing = this.landingSingleton.isLanding;
   }
 }

@@ -1,0 +1,82 @@
+
+@import "../shared/shared.less";
+
+.mentee-content {
+  padding-bottom: 100px;
+}
+
+.mentorship-line {
+  width: 193px !important;
+}
+
+.mentee-container {
+  flex-direction: row;
+  display: flex;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 11em;
+  height: 11em;
+}
+
+.profile {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.profile-mobile {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  > * {
+      margin: auto;
+      text-align: center;
+  }
+
+  .profile-pic {
+      padding-bottom: 1em;
+  }
+
+  .info {
+      padding-left: 1em;
+  }
+
+  .org-container {
+      margin: auto;
+      padding-left: 1.5em;
+  }
+}
+
+.profile-content {
+  margin-left: 35px;
+
+  .overview {
+      .pic {
+          height: 50px;
+      }
+
+      .info {
+          .org-container {
+              display: flex;
+
+              .school-pic {
+                  padding-left: 30px;
+              }
+          }
+
+          .company-name {
+              margin-left: 25px;
+              margin-top: 5px;
+              font-size: 18px;
+          }
+      }
+  }
+
+  .profile-info {
+      padding-top: 10px;
+  }
+}

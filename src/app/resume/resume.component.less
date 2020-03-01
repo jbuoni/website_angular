@@ -1,0 +1,163 @@
+@import "../shared/shared.less";
+
+.resume {
+  font-family: Arial;
+}
+
+.resume-image {
+  height: 50px;
+  padding-right: 20px;
+  margin-top: 10px;
+}
+
+.resume-item-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.resume-overlay {
+  background: @primary url('../../assets/images/resumetop.jpg');
+  width: 100%;
+  height: 7em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .4;
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+.resume-top {
+  display: flex;
+  width: 100%;
+  height: 7em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(27, 36, 47, .6);
+  // background: @primary;
+  padding-left: 1.5em;
+  border-bottom: @third solid .2em;
+  z-index: 10;
+
+  .resume-download-button {
+    background-color: @primary;
+    border: @primary solid .2em;
+    color: @third;
+    font-weight: bold;
+    margin-left: auto;
+    order: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 3em;
+  }
+
+  .resume-top-left {
+    .resume-name {
+      color: @white;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    .resume-title {
+      color: @white;
+      font-size: 1.5em;
+    }
+  }
+
+  .resume-about {
+    padding-top: 10px;
+    padding-right: 20px;
+    color: @white;
+    margin-left: auto;
+    order: 2;
+    width: 50%;
+    font-size: 1em;
+
+  }
+}
+.resume-content {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 7em;
+
+  .resume-header {
+    padding-top: 10px;
+    color: @primary;
+  }
+
+  .resume-mid {
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 75%;
+
+    .resume-section {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .resume-header {
+      color: @third;
+      font-weight: bold;
+    }
+
+    .resume-item {
+      padding-left: 5px;
+    }
+
+    .resume-line {
+      background-color: @third;
+      width: 80%;
+      height: 2px;
+      margin-bottom: 5px;
+    }
+
+    .resume-line1 {
+      font-weight: bold;
+      color: @primary;
+    }
+  }
+
+  .resume-content-right {
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    display: flex;
+    flex-direction: column;
+    width: 24em;
+    border-right: @primary solid 1px;
+
+    .personal {
+      display: block;
+
+      .resume-icon {
+        color: @third;
+        padding-right: 16px;
+      }
+
+      .laptop {
+        padding-right: 10px;
+      }
+
+      .phone  {
+        padding-right: 20px;
+      }
+    }
+
+    .skills {
+      .skill-container {
+        display: flex;
+        .skill-span {
+          width: 120px;
+        }
+
+        .star {
+          color: @third;
+        }
+      }
+    }
+  }
+
+}
