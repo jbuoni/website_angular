@@ -39,4 +39,34 @@ export class AboutComponent {
       exp: 'In addition to the core CS skill set and high-level development design that I utilize in my day-to-day,through personal projects I have become well versed in the facets of cutting-edge concepts such as machine-learning, cyber-security, and cloud computing.'
     }
   ];
+
+  onBitbucketClick = (): void => {
+    const win = window.open('https://bitbucket.org/JasonBuoni25/', '_blank');
+    win.focus();
+  }
+
+  onFacebookClick = (): void => {
+      const win = window.open('https://www.facebook.com/jason.buoni', '_blank');
+      win.focus();
+  }
+
+  onLinkedInClick = (): void => {
+      const win = window.open('https://www.linkedin.com/in/jason-buoni-33684451/', '_blank');
+      win.focus();
+  }
+
+  onGithubClick = (): void => {
+      const win = window.open('https://github.com/jbuoni', '_blank');
+      win.focus();
+  }
+
+  onStackOverflowClick = (): void => {
+      const win = window.open('https://stackoverflow.com/users/650489/stanley-cup-phil', '_blank');
+      win.focus();
+  }
+  clickFarm = (): void => {
+    const win = window.open('http://lachenbockfarm.com/', '_blank');
+    win.focus();
+  }
+
 }

@@ -1,0 +1,92 @@
+@import "../shared/shared.less";
+
+.line {
+  width: 150px !important;
+}
+
+.col-border {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  border-bottom: #616161 solid 1px;
+}
+
+.col-bottom {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.top-image-wrapper {
+  .logos {
+    display: flex;
+
+    .circle {
+      display: flex;
+      align-items: center;
+      height: 115px;
+      width: 115px;
+      background-color: @secondary;
+      border-radius: 50%;
+      color: @third;
+      margin-left: auto;
+      margin-right: auto;
+
+      .python {
+        padding-left: 15px;
+      }
+
+      .js {
+        padding-left: 23px;
+      }
+
+      .java {
+        padding-left: 20px;;
+      }
+
+      .android  {
+        padding-left: 3px;
+      }
+
+      .react, .node {
+        padding-left: 8px;
+      }
+    }
+  }
+}
+
+.project-content {
+  display: block;
+  padding-top: 50px;
+  margin-right: -1rem;
+  padding-bottom: 50px;
+
+  .project-title {
+    display: flex;
+
+    .project-link {
+      padding: 5px 0 0 10px;
+    }
+
+    .project-tool-container {
+      padding: 0 0 0 5px;
+
+      i {
+        padding-left: 5px;
+        padding-top: 5px;
+      }
+    }
+  }
+
+  .project-image-container {
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    .project-image {
+      height: 300px;
+      padding-left: 10px;
+    }
+
+    .project-image-full {
+      height: 300px;
+      padding-left: 10px;
+    }
+  }
+}

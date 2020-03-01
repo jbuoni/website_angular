@@ -1,1 +1,118 @@
-<p>projects works!</p>
+<div class="top">
+  <div class="header-container">
+    <div class="header-top">
+      <h1 class="header-h3">Projects</h1>
+      <div class="header-bar line"></div>
+    </div>
+  </div>
+  <div class="top-image-wrapper">
+    <div class="logos">
+        <div class="circle">
+            <i class="fab fa-python fa-6x python"></i>
+        </div>
+        <div class="circle">
+            <i class="fab fa-java fa-6x java"></i>
+        </div>
+        <div class="circle">
+            <i class="fab fa-node fa-5x node"></i>
+        </div>
+        <div class="circle">
+            <i class="fab fa-react fa-6x react"></i>
+        </div>
+        <div class="circle">
+            <i class="fab fa-js fa-5x js"></i>
+        </div>
+    </div>
+</div>
+</div>
+<main class="container p3 ">
+  <div class="project-content">
+    <div class="col sm-col-7 mosaic col-border">
+        <div class="project-title">
+            <h2>Mosaic Python</h2>
+            <div class="project-link item-hover" (click)="onClick('https://github.com/jbuoni/MosaicPython')">
+              <i class="fab fa-github-alt fa-2x icon" aria-hidden="true"></i>
+            </div>
+            <div class="project-tool-container">
+                <i class="fab fa-python fa-2x python"></i>
+            </div>
+        </div>
+        <div class="project-information">
+            <div class="project-description">
+                Mosaic Python is a mosaic photo generator. The application will generate mosaic photos using a series if inputted patch images. Using Python as well as computational photography principals, the applications take in a series of images as well as a final image to generate, creates a quick mapping of images to their histograms, and for each pixel group, maps the histogram of that
+                the portion of the final image to the best image inputted.
+            </div>
+            <div class="project-image-container">
+                <img src="../../assets/images/mosaic1.png" class="project-image" />
+                <img src="../../assets/images/mosaic2.png" class="project-image" />
+            </div>
+        </div>
+    </div>
+    <div class="col sm-col-7 strategy col-border">
+        <div class="project-title">
+            <h2>Strategy Learner</h2>
+            <div class="project-link item-hover" (click)="onClick('https://bitbucket.org/JasonBuoni25/strategy-learner/src/master/')">
+              <i class="fab fa-bitbucket fa-2x icon" aria-hidden="true"></i>
+            </div>
+            <div class="project-tool-container">
+                <i class="fab fa-python fa-2x python"></i>
+            </div>
+        </div>
+        <div class="project-information">
+            <div class="project-description">
+                Using a bagged random tree learner, created a market simulation on a specific stock. Learner would buy and sell stock
+                based on specific parameters rolling means, Bollinger Bands, and sma. On average, the learner greatly outperformed the
+                benchmark.
+            </div>
+            <div class="project-image-container">
+                <img src="../../assets/images/exp1.png" class="project-image" />
+                <img src="../../assets/images/bbpplot.png" class="project-image" />
+            </div>
+        </div>
+    </div>
+    <div class="col sm-col-7 android-list col-border">
+        <div class="project-title">
+            <h2>Georgia Tech Scheduler</h2>
+            <div class="project-link item-hover" (click)="onClick('https://github.com/jbuoni/GeorgiaTechScheduler')">
+              <i class="fab fa-github-alt fa-2x icon" aria-hidden="true"></i>
+            </div>
+            <div class="project-tool-container">
+                <i class="fab fa-python fa-2x python"></i>
+                <i class="fab fa-js fa-2x python"></i>
+            </div>
+        </div>
+        <div class="project-information">
+            <div class="project-description">
+                Creates a scheduler app that can be used (via web browser) to schedule student courses. Below is actually a video,
+                there is just some talking up front which is muted by default.
+            </div>
+            <div class="project-image-container">
+                <video class="video-container video-container-overlay" autoPlay muted
+                        data-reactid=".0.1.0.0" height="400">
+                    <source type="video/mp4" data-reactid=".0.1.0.0.0" src="../../assets/images/project3.mp4" />
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="col sm-col-7 android-list col-bottom">
+        <div class="project-title">
+            <h2>Shopping List</h2>
+            <div class="project-link item-hover" (click)="onClick('https://github.com/jbuoni/Android-Grocery-List')">
+              <i class="fab fa-github-alt fa-2x icon" aria-hidden="true"></i>
+            </div>
+            <div class="project-tool-container">
+                <i class="fab fa-java fa-2x"></i>
+                <i class="fab fa-android fa-2x"></i>
+            </div>
+        </div>
+        <div class="project-information">
+            <div class="project-description">
+                The Android Grocery List application allows users to store a shopping list.
+            </div>
+            <div class="project-image-container">
+                <img src="../../assets/images/list.png" class="project-image-full" />
+            </div>
+        </div>
+    </div>
+  </div>
+</main>

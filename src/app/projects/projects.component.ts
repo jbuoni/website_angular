@@ -9,6 +9,11 @@ export class ProjectsComponent implements OnInit {
 
   constructor() { }
 
+  onClick = (link: string): void => {
+    const win = window.open(link, '_blank');
+    win.focus();
+  }
+
   ngOnInit(): void {
   }
 
