@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
 
   setLanding(setLanding: boolean): void {
     this.landingSingleton.isLanding = setLanding;
+    this.landing = setLanding;
   }
 
   onEmailButtonClick(event): void {
@@ -34,6 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('hi')
     const url: string = window.location.href;
     this.currentTab = url.split('/').pop();
     this.landing = this.landingSingleton.isLanding;
