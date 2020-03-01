@@ -6,6 +6,11 @@ interface IIcon {
   exp: string;
 }
 
+interface IExperience {
+  language: string;
+  years: number;
+}
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -40,33 +45,64 @@ export class AboutComponent {
     }
   ];
 
-  onBitbucketClick = (): void => {
+  experience: Array<IExperience> = [
+    { language: 'JavaScript', years: 90 },
+    { language: 'Java', years: 60 },
+    { language: 'Python', years: 70 },
+    { language: 'NodeJS', years: 70 },
+    { language: 'TypeScript', years: 70 },
+    { language: 'React', years: 40 },
+    { language: 'Angular', years: 20 },
+    { language: 'C#', years: 40 },
+    { language: 'Scala', years: 50 },
+    { language: 'Mongo', years: 40 },
+    { language: 'Docker', years: 20 },
+    { language: 'SQL', years: 50 },
+    { language: 'Postgres', years: 30 },
+    { language: 'JQuery', years: 70 },
+    { language: 'CSS', years: 40 },
+    { language: 'Ruby', years: 20 },
+    { language: 'Kubernetes', years: 10 }
+  ];
+
+  onBitbucketClick = (event): void => {
     const win = window.open('https://bitbucket.org/JasonBuoni25/', '_blank');
     win.focus();
+    event.preventDefault();
   }
 
-  onFacebookClick = (): void => {
-      const win = window.open('https://www.facebook.com/jason.buoni', '_blank');
-      win.focus();
+  onFacebookClick = (event): void => {
+    const win = window.open('https://www.facebook.com/jason.buoni', '_blank');
+    win.focus();
+    event.preventDefault();
   }
 
-  onLinkedInClick = (): void => {
-      const win = window.open('https://www.linkedin.com/in/jason-buoni-33684451/', '_blank');
-      win.focus();
+  onLinkedInClick = (event): void => {
+    const win = window.open('https://www.linkedin.com/in/jason-buoni-33684451/', '_blank');
+    win.focus();
+    event.preventDefault();
   }
 
-  onGithubClick = (): void => {
-      const win = window.open('https://github.com/jbuoni', '_blank');
-      win.focus();
+  onGithubClick = (event): void => {
+    const win = window.open('https://github.com/jbuoni', '_blank');
+    win.focus();
+    event.preventDefault();
   }
 
-  onStackOverflowClick = (): void => {
-      const win = window.open('https://stackoverflow.com/users/650489/stanley-cup-phil', '_blank');
-      win.focus();
+  onStackOverflowClick = (event): void => {
+    const win = window.open('https://stackoverflow.com/users/650489/stanley-cup-phil', '_blank');
+    win.focus();
+    event.preventDefault();
   }
-  clickFarm = (): void => {
+  clickFarm = (event): void => {
     const win = window.open('http://lachenbockfarm.com/', '_blank');
     win.focus();
+    event.preventDefault();
   }
 
+  getStyle = (years: number) => {
+    return { width: `${years}%` };
+  }
 }
+
+

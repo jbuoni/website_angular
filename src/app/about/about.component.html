@@ -37,7 +37,11 @@
         <div className="about-panel">
           <h3 className="home-h3">Experience</h3>
           <div className="exp">
-
+            <ng-template ngFor let-exp [ngForOf]="experience" let-i="index">
+              <div class="progress-bar-wrapper">
+                <div class="progress-bar" [ngStyle]="getStyle(exp.years)">{{exp.language}}</div>
+              </div>
+            </ng-template>
           </div>
         </div>
         <div class="about-panel">

@@ -48,30 +48,31 @@
         people, why not connect with them?
     </p>
     </div>
-
-    <ng-template ngFor let-mentee [ngForOf]="myMentees" let-i="index">
-      <div class="profile col sm-col-7">
-        <img class="profile-pic" src="{{mentee.pic}}" />
-        <div class="profile-content">
-            <div class="overview">
-                <div class="info">
-                    <h4>{{mentee.name}} &nbsp;
-                        <a href="{{mentee.website}}" target="_blank">
-                          <i ngClass="{ {{mentee.faIcon}} hover }"
-                          ></i>
+    <div class="mentees">
+      <ng-template ngFor let-mentee [ngForOf]="myMentees" let-i="index">
+        <div class="profile col sm-col-7">
+          <img class="profile-pic" src="{{mentee.pic}}" />
+          <div class="profile-content">
+              <div class="overview">
+                  <div class="info">
+                      <h4>{{mentee.name}} &nbsp;
+                          <a href="{{mentee.website}}" target="_blank">
+                            <i ngClass="{ {{mentee.faIcon}} hover }"
+                            ></i>
+                          </a>
+                      </h4>
+                      <div class="title"><h5><i>{{mentee.title}}</i></h5></div>
+                      <div class="org-container">
+                        <a href="{{mentee.companyWebsite}}" target="_blank">
+                          <img class="pic hover" src="{{mentee.companyPic}}" />
                         </a>
-                    </h4>
-                    <div class="title"><h5><i>{{mentee.title}}</i></h5></div>
-                    <div class="org-container">
-                      <a href="{{mentee.companyWebsite}}" target="_blank">
-                        <img class="pic hover" src="{{mentee.companyPic}}" />
-                      </a>
-                      <img class="pic school-pic" src="{{mentee.schoolPic}}" />
-                    </div>
-                </div>
-            </div>
+                        <img class="pic school-pic" src="{{mentee.schoolPic}}" />
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
-      </div>
-    </ng-template>
+      </ng-template>
+    </div>
   </div>
 </main>

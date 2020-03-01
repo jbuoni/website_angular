@@ -9,7 +9,7 @@ export default class LandingSingleton {
   private constructor() {
     const url: string = window.location.href;
     const currentTab: string = url.split('/').pop();
-    this.isLanding = currentTab === 'landing' || currentTab === 'resume';
+    this.isLanding = currentTab === 'landing' || currentTab === 'resume'  || currentTab === '';
    }
 
   /**
